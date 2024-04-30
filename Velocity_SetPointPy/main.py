@@ -38,20 +38,20 @@ class State:
 
 # 创建三个状态对象
 state1 = State()
-state1.p0 = 0
-state1.v0 = -6
-state1.a0 = 5
+state1.p0 = 10
+state1.v0 = 1
+state1.a0 = 0
 state1.j0 = 0.0
-state1.p = 0
-state1.v = -6
-state1.a = 5
+state1.p = 10
+state1.v = 1
+state1.a = 0
 state1.j = 0
-state1.p_sp = 0.0
-state1.v_sp = 0.0
+state1.p_sp = 0
+state1.v_sp = 3
 state1.a_sp = 0.0
 state1.v_max = 5.0
-state1.a_max = 5.0
-state1.j_max = 10.0
+state1.a_max = 2.0
+state1.j_max = 4.0
 state1.T1 = 0
 state1.T2 = 0
 state1.T3 = 0

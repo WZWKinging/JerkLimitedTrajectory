@@ -1,5 +1,5 @@
 function [ T1, T2, T3, T4, T5, T6, T7, direction_acc, direction_dec, v_m ] = binarySearchUpdateDurationsMinimizeTotalTime( j_max, a0, a_max, v0, v_max, p0, pt )
-    %初始化速度、位置参数
+
     delt_p = pt - p0;
     if delt_p == 0
         v_now = - sign(v0) * v_max;
@@ -17,7 +17,7 @@ function [ T1, T2, T3, T4, T5, T6, T7, direction_acc, direction_dec, v_m ] = bin
     maxIter = 100;
       
     while(MeetTheSetPoint ~= 1)
-        %更新时间及位置增量
+
         [ T1, T2, T3, T4, T5, T6, T7, dir_acc, dir_dec, deltP ] = updateDurations_Position_Setpoint( v_now, a0, v0, j_max, a_max, v_max, p0, pt );
         direction_acc = dir_acc;
         direction_dec = dir_dec;
@@ -32,7 +32,7 @@ function [ T1, T2, T3, T4, T5, T6, T7, direction_acc, direction_dec, v_m ] = bin
                 MeetTheSetPoint = 0;
             end 
         end
-        %更新v_now值重新进行时间计算
+
         if abs(deltP) > abs(delt_p)
             v_s = 0;
             v_e = v_now;

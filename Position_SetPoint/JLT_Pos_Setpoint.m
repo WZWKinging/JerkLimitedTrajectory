@@ -1,7 +1,6 @@
 clc;clear;close all;
 local_time = 0;
 
-%结构体声明
 state.p0 = 0.0;
 state.v0 = 0.0;
 state.a0 = 0.0;
@@ -34,7 +33,6 @@ state.direction_dec = 0;
 state.timestamp = 0;
 state.v_m = 0.0;
 
-%x,y,z三轴状态量初始化
 state(1).p0 = -1.0;
 state(1).v0 = -6.0;
 state(1).a0 = 5.0;

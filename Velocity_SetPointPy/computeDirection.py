@@ -11,7 +11,8 @@ def compute_vel_at_zero_acc(state_v, state_a, max_jerk):
 
 def compute_direction(vel_sp, state_a, state_v, max_jerk):
     vel_zero_acc = compute_vel_at_zero_acc(state_v, state_a, max_jerk)
-    
+    print("vel_sp", vel_sp)
+    print("vel_zero_acc", vel_zero_acc)
     direction = (vel_sp - vel_zero_acc) / abs(vel_sp - vel_zero_acc) if vel_sp != vel_zero_acc else state_a / abs(state_a)
     
     if direction == 0:
